@@ -1,6 +1,6 @@
 {
   "name": "firemuzzy-trpc-browser",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "tRPC adapters and links for everywhere in the browser (fork by firemuzy",
   "author": "Janek Rahrt <janek.rahrt@me.com>, James Berry <jb@jamesbe.com>, @firemuzzy",
   "private": false,
