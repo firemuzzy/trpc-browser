@@ -1,8 +1,8 @@
 {
-  "name": "trpc-browser",
-  "version": "1.3.7",
-  "description": "tRPC adapters and links for everywhere in the browser",
-  "author": "Janek Rahrt <janek.rahrt@me.com>, James Berry <jb@jamesbe.com>",
+  "name": "firemuzzy-trpc-browser",
+  "version": "2.0.0",
+  "description": "tRPC adapters and links for everywhere in the browser (fork by firemuzy",
+  "author": "Janek Rahrt <janek.rahrt@me.com>, James Berry <jb@jamesbe.com>, @firemuzzy",
   "private": false,
   "license": "MIT",
   "files": [
@@ -23,9 +23,9 @@
     "popup",
     "browser"
   ],
-  "homepage": "https://github.com/janek26/trpc-browser",
-  "repository": "github:janek26/trpc-browser",
-  "bugs": "https://github.com/janek26/trpc-browser/issues",
+  "homepage": "https://github.com/firemuzzy/trpc-browser",
+  "repository": "github:firemuzzy/trpc-browser",
+  "bugs": "https://github.com/firemuzzy/trpc-browser/issues",
   "workspaces": [
     ".",
     "examples/with-plasmo"
