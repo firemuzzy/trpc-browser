@@ -52,7 +52,11 @@ export const createChromeHandler = <TRouter extends AnyRouter>(
       }
       const { method, params, id } = trpc;
 
-      const ctx = await createContext?.({ req: port, res: undefined });
+      const ctx = await createContext?.({
+        req: port,
+        res: undefined,
+        info: { isBatchCall: false, calls: [] },
+      });
       const handleError = (cause: unknown) => {
         const error = getErrorFromUnknown(cause);
 
@@ -105,7 +109,10 @@ export const createChromeHandler = <TRouter extends AnyRouter>(
         }
 
         const subscription = result.subscribe({
-          next: (data) => sendResponse({ result: { type: 'data', data } }),
+          next: (data) => {
+            const serializedData = transformer.output.serialize(data);
+            sendResponse({ result: { type: 'data', data: serializedData } });
+          },
           error: handleError,
           complete: () => sendResponse({ result: { type: 'stopped' } }),
         });
